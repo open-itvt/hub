@@ -5,7 +5,7 @@ import PopupBlock from '@/components/Popup';
 const FirstLoadPopup = () => {
     const [showPopup, setShowPopup] = useState(false);
     const cookie = useCookies();
-    const initialHasVisited = cookie.get("firstVisited")
+    const initialHasVisited = cookie.get("firstVisitedMigrate1")
   
     useEffect(() => {
       if (!initialHasVisited) {
@@ -15,7 +15,7 @@ const FirstLoadPopup = () => {
   
     const handleClosePopup = () => {
       setShowPopup(false);
-      cookie.set("firstVisited", Date.now(), { expires: 365 })
+      cookie.set("firstVisitedMigrate1", Date.now(), { expires: 365 })
     };
   
     return (
