@@ -4,7 +4,7 @@ const PopupMigrate = ({ onClose }) => {
   return (
     <div
       id="popup"
-      className="fixed inset-0 bg-gray-950 bg-opacity-90 flex justify-center items-center z-50"
+      className="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center z-50"
     >
       <div className="bg-gray-950 p-8 rounded shadow-lg text-center max-w-md w-full mx-4">
         <div className="inline-block px-3 py-1 rounded-full bg-blue-700 text-white text-xs font-semibold uppercase tracking-wider mb-4">
