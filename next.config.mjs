@@ -7,6 +7,19 @@ const nextConfig = {
 		},
 	},
 
+	async headers() {
+		return [
+			{
+				source: '/',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'private, no-cache, no-store, must-revalidate',
+					},
+				],
+			},
+		];
+	},
 };
 
 export default nextConfig;
