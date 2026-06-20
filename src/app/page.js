@@ -11,14 +11,23 @@ import { useLangData } from '@/components/client/useLangData';
 import { fetchHeaderText } from '@/app/actions/fetchHeaderText';
 import LoadingBar from '@/components/LoadingBar';
 
+const REDIRECT_DEADLINE = new Date('2026-06-20T20:00:00+02:00').getTime();
+
 const Page = () => {
   const appRef = useRef();
   const lang = useLangData('pages');
   const [playerText, setPlayerText] = useState('');
   const [headerText, setHeaderText] = useState(null);
+  const [isRedirectTime, setIsRedirectTime] = useState(false);
 
   useEffect(() => {
-    
+    const forceRedirect = process.env.NEXT_PUBLIC_FORCE_REDIRECT_SET === '1';
+    const pastDeadline = Date.now() >= REDIRECT_DEADLINE;
+    setIsRedirectTime(forceRedirect || pastDeadline);
+  }, []);
+
+  useEffect(() => {
+    if (isRedirectTime) return;
     if (!lang) return;
     if (lang && lang.pages?.player?.watch_broadcast) {
       setPlayerText(lang.pages.player.watch_broadcast);
@@ -30,13 +39,21 @@ const Page = () => {
     };
 
     loadHeaderText();
-  }, [lang]);
-  
+  }, [lang, isRedirectTime]);
+
   useEffect(() => {
     if (appRef.current) {
       appRef.current.classList.remove('no-clickable', 'stop-drag');
     }
   }, [headerText]);
+
+  if (isRedirectTime) {
+    return (
+      <HeroUIProvider>
+        <FirstLoadPopup />
+      </HeroUIProvider>
+    );
+  }
 
   if (!headerText || !playerText) {
     return <LoadingBar />;

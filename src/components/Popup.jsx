@@ -13,7 +13,8 @@ const PopupMigrate = ({ onClose }) => {
 
         <h2 className="text-2xl font-bold mb-3 text-white">
           <span className="text-blue-400">Hub iTVT</span> zostanie wycofany<br />
-          z dniem <span className="text-blue-400">20.06.2026</span>
+          z dniem <span className="text-blue-400">20.06.2026</span><br></br>
+          <span className="text-xl text-red-600">o godz 20:00</span>
         </h2>
 
         <p className="text-gray-400 mb-2 text-sm leading-relaxed">
@@ -46,7 +47,7 @@ const PopupMigrate = ({ onClose }) => {
         >
           Więcej o przetwarzaniu danych →
         </a>
-
+        <br />
         <button
           onClick={onClose}
           className="px-6 py-3 bg-blue-700 text-white rounded-lg font-semibold hover:brightness-110 transition-all"

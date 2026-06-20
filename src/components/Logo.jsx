@@ -5,11 +5,10 @@ import React from "react";
 import Image from "next/image";
 
 export const Logo = () => (
-  <Image 
+  <Image
     src="/static/img/logo.png"
-    width={42} 
-    height={42} 
-    style={{ width: "auto" }}
-    className="mx-2" 
+    width={62}
+    height={31}
+    className="mx-2"
     alt="iTVT Home"/>
 );
