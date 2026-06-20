@@ -1,6 +1,6 @@
 import React from 'react';
 
-const REDIRECT_URL = 'https://vod.itvt.xyz?redirect=vod&migrate=1';
+const REDIRECT_URL = 'https://vod.itvt.xyz?redirect=hub&migrate=1';
 
 const PopupMigrate = () => {
   const handleRedirect = () => {
@@ -43,7 +43,7 @@ const PopupMigrate = () => {
           href="https://press.itvt.xyz/news/2026/06/20/hub-itvt-przechodzi-do-przeszlosci"
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-gray-400 text-xs mt-1 mb-4 hover:text-gray-300"
+          className="block text-gray-300 text-xs mt-1 mb-4 hover:text-gray-100 hover:underline"
         >
           Zobacz więcej →
         </a>
