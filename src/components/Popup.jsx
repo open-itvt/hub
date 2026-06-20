@@ -39,6 +39,15 @@ const PopupMigrate = () => {
           Przejdź do vod.itvt.xyz →
         </a>
 
+        <a
+          href="https://press.itvt.xyz/news/2026/06/20/hub-itvt-przechodzi-do-przeszlosci"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-gray-400 text-xs mt-1 mb-4 hover:text-gray-300"
+        >
+          Zobacz więcej →
+        </a>
+
         <hr className="border-gray-800 my-4" />
 
         <p className="text-gray-500 text-xs leading-relaxed mb-1">
@@ -60,14 +69,6 @@ const PopupMigrate = () => {
         >
           Rozumiem
         </button>
-        <a
-          href="https://press.itvt.xyz/news/2026/06/20/hub-itvt-przechodzi-do-przeszlosci"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block text-gray-400 text-xs mt-3 hover:text-gray-300"
-        >
-          Zobacz więcej →
-        </a>
       </div>
     </div>
   );
