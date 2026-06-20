@@ -27,7 +27,7 @@ export default function CountdownTimer() {
           Serwis Hub iTVT został zamknięty
         </h1>
         <a
-          href="https://vod.itvt.xyz?redirect=vod&migrate=1"
+          href="https://vod.itvt.xyz?redirect=hub&migrate=1"
           target="_blank"
           rel="noopener noreferrer"
           className="px-8 py-4 bg-blue-600 text-white text-lg sm:text-xl font-semibold rounded-xl hover:bg-blue-700 transition-all"
