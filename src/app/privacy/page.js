@@ -8,9 +8,7 @@ import NavbarWrapper from '@/components/NavBar/wrapper';
 import { useLangData } from '@/components/client/useLangData';
 import { fetchHeaderText } from '@/app/actions/fetchHeaderText';
 import LoadingBar from '@/components/LoadingBar';
-
-
-const REDIRECT_URL = 'https://vod.itvt.xyz?redirect=hub&migrate=1';
+import { REDIRECT_URL } from '@/lib/config';
 const DEADLINE = new Date(2026, 5, 21, 20, 5);
 
 const Page = () => {

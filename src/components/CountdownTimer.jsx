@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { REDIRECT_URL, PRESS_LINK } from '@/lib/config';
 
 const DEADLINE = new Date('2026-06-20T20:05:00+02:00').getTime();
 const TEN_MINUTES = 10 * 60 * 1000;
@@ -27,12 +28,20 @@ export default function CountdownTimer() {
           Serwis Hub iTVT został zamknięty
         </h1>
         <a
-          href="https://vod.itvt.xyz?redirect=hub&migrate=1"
+          href={REDIRECT_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="px-8 py-4 bg-blue-600 text-white text-lg sm:text-xl font-semibold rounded-xl hover:bg-blue-700 transition-all"
         >
           Przejdź do iVOD
+        </a>
+        <a
+          href={PRESS_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 text-sm mt-4 hover:text-gray-300 hover:underline"
+        >
+          Zobacz więcej →
         </a>
       </div>
     );
