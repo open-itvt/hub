@@ -10,11 +10,20 @@ import { fetchHeaderText } from '@/app/actions/fetchHeaderText';
 import LoadingBar from '@/components/LoadingBar';
 
 
+const REDIRECT_URL = 'https://vod.itvt.xyz?redirect=vod&migrate=1';
+const DEADLINE = new Date(2026, 5, 21, 20, 5);
+
 const Page = () => {
     const appRef = useRef();
     const privacyData = useLangData('privacy');
     const [privacyText, setPrivacyText] = useState('');
     const [headerText, setHeaderText] = useState(null);
+
+    useEffect(() => {
+        if (new Date() >= DEADLINE) {
+            window.location.replace(REDIRECT_URL);
+        }
+    }, []);
 
     useEffect(() => {
         if (!privacyData) return;

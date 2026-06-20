@@ -1,6 +1,12 @@
 import React from 'react';
 
-const PopupMigrate = ({ onClose }) => {
+const REDIRECT_URL = 'https://vod.itvt.xyz?redirect=vod&migrate=1';
+
+const PopupMigrate = () => {
+  const handleRedirect = () => {
+    window.location.href = REDIRECT_URL;
+  };
+
   return (
     <div
       id="popup"
@@ -25,7 +31,7 @@ const PopupMigrate = ({ onClose }) => {
         </p>
 
         <a
-          href="https://vod.itvt.xyz"
+          href={REDIRECT_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block text-blue-400 font-semibold text-base mb-4 hover:underline"
@@ -49,7 +55,7 @@ const PopupMigrate = ({ onClose }) => {
         </a>
         <br />
         <button
-          onClick={onClose}
+          onClick={handleRedirect}
           className="px-6 py-3 bg-blue-700 text-white rounded-lg font-semibold hover:brightness-110 transition-all"
         >
           Rozumiem
