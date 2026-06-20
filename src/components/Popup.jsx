@@ -60,6 +60,14 @@ const PopupMigrate = () => {
         >
           Rozumiem
         </button>
+        <a
+          href="https://press.itvt.xyz/news/2026/06/20/hub-itvt-przechodzi-do-przeszlosci"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block text-gray-400 text-xs mt-3 hover:text-gray-300"
+        >
+          Zobacz więcej →
+        </a>
       </div>
     </div>
   );
