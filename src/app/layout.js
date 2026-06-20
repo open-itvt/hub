@@ -3,6 +3,7 @@ import "./globals.css";
 import Providers from './providers';
 import { CookiesProvider } from 'next-client-cookies/server';
 import Script from 'next/script';
+import CountdownTimer from '@/components/CountdownTimer';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
         <CookiesProvider>
           <Providers>{children}</Providers>
         </CookiesProvider>
+        <CountdownTimer />
       </body>
     </html>
   );
