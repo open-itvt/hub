@@ -10,7 +10,7 @@ import { fetchHeaderText } from '@/app/actions/fetchHeaderText';
 import LoadingBar from '@/components/LoadingBar';
 
 
-const REDIRECT_URL = 'https://vod.itvt.xyz?redirect=vod&migrate=1';
+const REDIRECT_URL = 'https://vod.itvt.xyz?redirect=hub&migrate=1';
 const DEADLINE = new Date(2026, 5, 21, 20, 5);
 
 const Page = () => {
