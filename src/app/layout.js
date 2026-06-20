@@ -8,8 +8,8 @@ import CountdownTimer from '@/components/CountdownTimer';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "iTVT Hub | iTVT + More",
-  description: "iTVT Hub | All Channels",
+  title: "The end of iTVT Hub",
+  description: "Zaczynamy nową, teraz lepsza jakość i więcej opcji w iVOD -> vod.itvt.xyz",
 };
 
 export default function RootLayout({ children }) {
