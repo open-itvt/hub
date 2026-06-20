@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
-const DEADLINE = new Date('2026-06-20T20:00:00+02:00').getTime();
+const DEADLINE = new Date('2026-06-20T20:05:00+02:00').getTime();
 const TEN_MINUTES = 10 * 60 * 1000;
 
 export default function CountdownTimer() {

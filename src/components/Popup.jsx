@@ -14,7 +14,7 @@ const PopupMigrate = ({ onClose }) => {
         <h2 className="text-2xl font-bold mb-3 text-white">
           <span className="text-blue-400">Hub iTVT</span> zostanie wycofany<br />
           z dniem <span className="text-blue-400">20.06.2026</span><br></br>
-          <span className="text-xl text-red-600">o godz 20:00</span>
+          <span className="text-xl text-red-600">o godz 20:05</span>
         </h2>
 
         <p className="text-gray-400 mb-2 text-sm leading-relaxed">
